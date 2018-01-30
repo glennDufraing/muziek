@@ -10,17 +10,29 @@
       </div>
       <br />
       <div class = 'form-group'>
-         <label for = 'description'>Description :</label>
-         <input type = 'text' class = 'form-control' id = 'description' required
-            [(ngModel)] = 'model.description' name = 'description'>
+         <label for = 'demonym'>Demonym :</label>
+         <input type = 'text' class = 'form-control' id = 'demonym' required
+            [(ngModel)] = 'model.demonym' name = 'demonym'>
       </div>
       <br />
       <div class = 'form-group'>
-         <label for = 'price'>Price :</label>
-         <input type = 'text' class = 'form-control' id = 'price' required
-            [(ngModel)] = 'model.price' name = 'price'>
+         <label for = 'currency'>currency :</label>
+         <input type = 'text' class = 'form-control' id = 'currency' required
+            [(ngModel)] = 'model.currency' name = 'currency'>
       </div>
       <br />
+     <div class='form-group'>
+       <label for='talen'>talen :</label>
+       <input type='number' class='form-control' id='talen' required
+              [(ngModel)]='model.talen' name='talen'>
+     </div>
+     <br />
+     <div class='form-group'>
+       <label for='borders'>borders :</label>
+       <input type='text' class='form-control' id='borders' required
+              [(ngModel)]='model.borders' name='borders'>
+     </div>
+     <br />
       <button type='submit' class='btn btn-success' [disabled]='productForm.invalid'>Add</button>
 
 

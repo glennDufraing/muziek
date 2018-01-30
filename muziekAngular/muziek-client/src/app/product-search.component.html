@@ -14,7 +14,10 @@
    <br /><br />
 
    <label>Name :&nbsp;</label>{{ result_name }}<br />
-   <label>Description :&nbsp;</label>{{ result_description }}<br />
-   <label>Price :&nbsp;</label>{{ result_price }}
-
+   <label>Demonym :&nbsp;</label>{{ result_demonym }}<br />
+   <label>Currency :&nbsp;</label>{{ result_currency }}<br />
+  <label>talen :&nbsp;</label>{{ result_talen }}<br />
+  <ul *ngFor ="let border of result_borders">
+    <li >{{border}}</li>
+  </ul>
 </div>

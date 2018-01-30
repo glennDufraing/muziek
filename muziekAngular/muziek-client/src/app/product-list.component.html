@@ -3,8 +3,12 @@
    <ul>
     <li *ngFor='let product of products'>
       Name : {{ product.name }}<br />
-      Description : {{ product.description }}<br />
-      Price : {{ product.price }}
+      Demonym : {{ product.demonym }}<br />
+      currency : {{ product.currency }}<br />
+      talen:{{product.talen}}<br />
+      <div *ngFor="let border of product.borders">
+        {{border}}
+      </div>
     </li>
   </ul>
 

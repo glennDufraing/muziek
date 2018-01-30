@@ -42,15 +42,17 @@ app.get('/list', (req, res) => {
 
 // add a product to the db
 app.post('/add', (req, res) => {
-  db.collection('person').save(req.body, (err, result) => {
-     if (err) throw err
-  })
-})
+    console.log(req.body.json);
+    db.collection('person').save(req.body, (err, result) => {
+        console.log(req.body);
+        if (err) throw err
+    })
+});
 
 // find a product
-app.post('/person', (req, res) => {
+app.post('/search', (req, res) => {
  var query = { name: req.body.name }
- db.collection('products').find(query).toArray(function(err, result) {
+ db.collection('person').find(query).toArray(function(err, result) {
    if (err) throw err
    if (result == '')
        res.json({})

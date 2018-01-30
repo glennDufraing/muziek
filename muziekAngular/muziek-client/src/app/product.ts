@@ -1,8 +1,15 @@
+
 export class Product {
+  sBorder: Array<String>;
+  constructor(public name: string, public demonym: string, public currency: string, public talen: number,
+    public borders: string) { }
 
-   constructor (public name: string, public description: string, public price: number) {}
+  SplitBorder(): void{
+    this.sBorder = this.borders.split(";");
 
-   toForm(): string {
-      return `name=${this.name}&description=${this.description}&price=${this.price}`;
+  }
+  toForm(): string {
+    this.SplitBorder()
+    return `name=${this.name}&demonym=${this.demonym}&currency=${this.currency}&talen${this.talen}&borders=${this.sBorder}`;
    }
 }

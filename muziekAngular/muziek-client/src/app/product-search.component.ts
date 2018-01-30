@@ -12,8 +12,10 @@ import { ProductService } from './product.service';
 export class ProductSearchComponent {
     search: FormGroup;
     result_name: string;
-    result_description: string;
-    result_price: number;
+    result_demonym: string;
+    result_talen: number;
+    result_borders: string[];
+    result_currency:string
 
     ngOnInit() {
        this.search = new FormGroup({
@@ -25,9 +27,13 @@ export class ProductSearchComponent {
 
    onSubmit() {
        this.productService.searchProduct(this.search.value.name)
-                 .subscribe(data => { this.result_name = data.name;
-                                      this.result_description = data.description;
-                                      this.result_price = data.price; });
+         .subscribe(data => {
+         this.result_name = data.name;
+         this.result_borders = data.borders;
+         this.result_currency = data.currency;
+         this.result_demonym = data.demonym;
+         this.result_talen = data.talen;
+         });
 
    }
 }

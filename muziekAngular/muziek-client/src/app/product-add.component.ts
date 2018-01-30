@@ -10,7 +10,7 @@ import { ProductService } from './product.service';
 })
 
 export class ProductAddComponent {
-   model = new Product('','', 0);
+   model = new Product('','','',0,'');
 
    constructor(private productService: ProductService, private router: Router) {}
 
