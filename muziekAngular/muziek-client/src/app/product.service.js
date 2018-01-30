@@ -20,13 +20,6 @@ var ProductService = (function () {
         var url = this.productsServiceURI + "/list";
         return this.http.get(url);
     };
-    // insert a new product
-    ProductService.prototype.addProduct = function (product) {
-        var url = this.productsServiceURI + "/add";
-        // !!! subscribe is needed to execute POST
-        this.http.post(url, product.toForm(), { headers: new http_1.HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded') })
-            .subscribe();
-    };
     // get a product based on the name
     ProductService.prototype.searchProduct = function (name) {
         var url = this.productsServiceURI + "/search";

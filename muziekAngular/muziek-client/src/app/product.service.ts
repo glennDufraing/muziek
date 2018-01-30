@@ -3,7 +3,6 @@ import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
 
-import { Product } from './product';
 
 @Injectable()
 export class ProductService {
@@ -19,14 +18,6 @@ export class ProductService {
       return this.http.get<Product[]>(url);
    }
 
-   // insert a new product
-   addProduct(product: Product): void {
-      let url = `${this.productsServiceURI}/add`;
-      // !!! subscribe is needed to execute POST
-      this.http.post(url, product.toForm(),
-                    {headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')})
-                    .subscribe();
-   }
 
    // get a product based on the name
    searchProduct(name: string): Observable<any> {

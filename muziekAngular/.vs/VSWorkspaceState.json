@@ -6,6 +6,6 @@
     "\\muziek-client\\src\\app",
     "\\muziek-service"
   ],
-  "SelectedNode": "\\muziek-service\\server.js",
+  "SelectedNode": "\\muziek-client\\src\\app\\product.service.ts",
   "PreviewInSolutionExplorer": false
 }
